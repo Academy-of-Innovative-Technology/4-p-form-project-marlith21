@@ -1,1 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Video Game Club </title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+</head>
 
+<body>
+
+<h1>Video Game Club </h1>
+
+<form id="myForm">
+
+    <fieldset>
+        <legend>Account Information</legend>
+
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" required>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="password">Password (must have 1 number, 1 uppercase, 8 characters):</label>
+        <input type="password" id="password" name="password"
+        pattern="(?=.*[A-Z])(?=.*[0-9]).{8,}" required>
+    </fieldset>
+
+    <fieldset>
+        <legend>Game Preferences</legend>
+
+        <label>Favorite Console:</label>
+        <div>
+            <input type="radio" name="console" value="PlayStation" required> PlayStation
+            <input type="radio" name="console" value="Xbox"> Xbox
+            <input type="radio" name="console" value="Nintendo"> Nintendo
+        </div>
+
+        <label>Favorite Game Genre:</label>
+        <div>
+            <input type="checkbox" name="genre" value="Action"> Action
+            <input type="checkbox" name="genre" value="Sports"> Sports
+            <input type="checkbox" name="genre" value="RPG"> RPG
+        </div>
+
+        <label for="game">Favorite Game:</label>
+        <input list="games" id="game" name="game">
+
+        <datalist id="games">
+            <option value="Fortnite">
+            <option value="Minecraft">
+            <option value="Call of Duty">
+            <option value="Zelda">
+        </datalist>
+
+    </fieldset>
+
+    <input type="submit" value="Join Club">
+
+</form>
+
+</body>
+</html>
